@@ -1,0 +1,15 @@
+/Users/neeveshjain/Developer/LLD/LLD/obj/Debug/net10.0/LLD.GeneratedMSBuildEditorConfig.editorconfig
+/Users/neeveshjain/Developer/LLD/LLD/obj/Debug/net10.0/LLD.AssemblyInfoInputs.cache
+/Users/neeveshjain/Developer/LLD/LLD/obj/Debug/net10.0/LLD.AssemblyInfo.cs
+/Users/neeveshjain/Developer/LLD/LLD/obj/Debug/net10.0/LLD.csproj.CoreCompileInputs.cache
+/Users/neeveshjain/Developer/LLD/LLD/obj/Debug/net10.0/LLD.sourcelink.json
+/Users/neeveshjain/Developer/LLD/LLD/bin/Debug/net10.0/LLD
+/Users/neeveshjain/Developer/LLD/LLD/bin/Debug/net10.0/LLD.deps.json
+/Users/neeveshjain/Developer/LLD/LLD/bin/Debug/net10.0/LLD.runtimeconfig.json
+/Users/neeveshjain/Developer/LLD/LLD/bin/Debug/net10.0/LLD.dll
+/Users/neeveshjain/Developer/LLD/LLD/bin/Debug/net10.0/LLD.pdb
+/Users/neeveshjain/Developer/LLD/LLD/obj/Debug/net10.0/LLD.dll
+/Users/neeveshjain/Developer/LLD/LLD/obj/Debug/net10.0/refint/LLD.dll
+/Users/neeveshjain/Developer/LLD/LLD/obj/Debug/net10.0/LLD.pdb
+/Users/neeveshjain/Developer/LLD/LLD/obj/Debug/net10.0/LLD.genruntimeconfig.cache
+/Users/neeveshjain/Developer/LLD/LLD/obj/Debug/net10.0/ref/LLD.dll
