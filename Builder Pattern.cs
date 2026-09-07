@@ -1,71 +1,72 @@
-﻿// Builder pattern
-
-using System.ComponentModel;
-using System.IO.IsolatedStorage;
+﻿using System.Collections.Generic;
 
 class Burger
 {
-    ///required
-        private string patty;
-        private string bun;
+    // fields matching what BurgerDefination collected
+    private string patty;
+    private string bun;
+    private bool withCheese;
+    private string withDrink;
+    private string withSide;
+    private List<string> toppings;
 
-        //optional
-        private Boolean _withCheese;
-        private string _withDrink;
-        private string _withSide;
-        private List<string> _toppings;
-    public Burger(string patty,string bun,Boolean _withCheese, string _withDrink, string _withSide,List<string> _toppings)
+    // Only the Builder should construct a Burger, so this stays private
+    private Burger(string patty, string bun, bool withCheese, string withDrink, string withSide, List<string> toppings)
     {
         this.patty = patty;
         this.bun = bun;
-        this._withCheese = _withCheese;
-        this._withDrink = _withDrink;
-        this._withSide = _withSide;
-        this._toppings = _toppings;
+        this.withCheese = withCheese;
+        this.withDrink = withDrink;
+        this.withSide = withSide;
+        this.toppings = toppings;
     }
 
-    public class BurgerDefination
+    public class BurgerBuilder
     {
-        //required
+        // required
         private string patty;
         private string bun;
 
-        //optional
-        private Boolean _withCheese;
-        private string _withDrink;
-        private string _withSide;
-        private List<string> _toppings;
+        // optional
+        private bool withCheese;
+        private string withDrink;
+        private string withSide;
+        private List<string> toppings;
 
-        public BurgerDefination(string patty, string bun)
+        public BurgerBuilder(string patty, string bun)
         {
-            this.bun = bun;
             this.patty = patty;
+            this.bun = bun;
         }
-        public BurgerDefination WithCheese(Boolean withCheese)
+
+        public BurgerBuilder WithCheese(bool withCheese)
         {
-            this._withCheese = withCheese;
+            this.withCheese = withCheese;
             return this;
         }
-        public BurgerDefination WithDrink(string withDrink)
+
+        public BurgerBuilder WithDrink(string withDrink)
         {
-            this._withDrink = withDrink;
+            this.withDrink = withDrink;
             return this;
         }
-        public BurgerDefination WithSide(string withSide)
+
+        public BurgerBuilder WithSide(string withSide)
         {
-            this._withSide = withSide;
+            this.withSide = withSide;
             return this;
         }
-        public BurgerDefination Toppings(List<string> Toppings)
+
+        public BurgerBuilder WithToppings(List<string> toppings)
         {
-            this._toppings = Toppings;
+            this.toppings = toppings;
             return this;
         }
+
         public Burger Build()
         {
-            return new Burger(this.patty,this.bun,this._withCheese,this._withDrink,this._withSide,this._toppings);
+            return new Burger(patty, bun, withCheese, withDrink, withSide, toppings);
         }
-
     }
 }
 
@@ -73,6 +74,9 @@ class BurgerMeal
 {
     public static void Main(string[] args)
     {
-        Burger myburger = new Burger.BurgerDefination("Bun","veg").WithCheese(true).Build();
+        Burger myBurger = new Burger.BurgerBuilder("Bun", "Patty")
+            .WithCheese(true)
+            .WithDrink("Coke")
+            .Build();
     }
 }
